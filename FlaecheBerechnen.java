@@ -30,7 +30,7 @@ public class FlaecheBerechnen {
 		
 		
 		for(int i=0; i<n; i++) {
-				xWert = coord[i+1%n][0] + coord[i][0];
+				xWert = coord[i][0] + coord[i+1%n][0];
 				yWert =  coord[0][i+1%n] - coord[0][i];
 				xMaly = xWert * yWert;
 				ergebnis += xMaly;
