@@ -1,5 +1,5 @@
 /**  
- * @author Korbinian Gauglitz
+ * @author
  */
 public class FlaecheBerechnen {
 	/*public static void main(String[] args) {
