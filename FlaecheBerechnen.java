@@ -22,7 +22,7 @@ public class FlaecheBerechnen {
 	}
 	public static float flaecheBerechnen(float[][] coord) {
 		
-		int n=coord.length;
+		int n=4;
 		float xWert = 0;
 		float yWert = 0;
 		float xMaly = 0;
@@ -30,12 +30,12 @@ public class FlaecheBerechnen {
 		
 		
 		for(int i=0; i<n; i++) {
-				xWert = coord[0][0] + coord[i+1][0];
-				yWert =  coord[0][i+1] - coord[0][0];
+				xWert = coord[i+1%n][0] + coord[i][0];
+				yWert =  coord[0][i+1%n] - coord[0][i];
 				xMaly = xWert * yWert;
 				ergebnis += xMaly;
 		}
-		ergebnis = ergebnis/2;
+		ergebnis = Math.abs(ergebnis/2);
 			
 		return ergebnis;
 	}
